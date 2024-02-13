@@ -4,18 +4,24 @@ project(testCmake)
 set(CMAKE_CXX_STANDARD 11)
 
 set(INCLUDE_DIR ${CMAKE_SOURCE_DIR}/)
-option(cil "Linux or Windows")
+option(DEST_OS "Linux or Windows")
 
-if(cil STREQUAL "Linux")
+if(DEST_OS STREQUAL "Linux")
     set(INCLUDE_DIR ${CMAKE_SOURCE_DIR}/Linux)
 endif()
 
-if(cil STREQUAL "Windows")
+if(DEST_OS STREQUAL "Windows")
     set(INCLUDE_DIR ${CMAKE_SOURCE_DIR}/Windows)
 endif()
+
 include_directories(${INCLUDE_DIR})
 
-add_executable(testCmake main.cpp
+#add_executable(testCmake main.cpp
+#        ${INCLUDE_DIR}/func.h
+#        ${INCLUDE_DIR}/func.cpp
+#)
+
+add_library(testCmake SHARED
         ${INCLUDE_DIR}/func.h
         ${INCLUDE_DIR}/func.cpp
 )

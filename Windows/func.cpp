@@ -10,6 +10,6 @@ void myPrint() {
     std::cout << "WINDOWS: Hello World!" << std::endl;
 }
 
-void myWindowsFunc() {
-    myPrint();
+std::string getOsName() {
+    return "I am WINDOWS";
 }

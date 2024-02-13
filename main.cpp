@@ -3,7 +3,7 @@
 
 int main() {
     myPrint();
-    myWindowsFunc();
-    myLinuxFunc();
+//    myWindowsFunc();
+//    myLinuxFunc();
     return 0;
 }

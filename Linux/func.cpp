@@ -10,6 +10,6 @@ void myPrint() {
     std::cout << "LINUX: Hello World!" << std::endl;
 }
 
-void myLinuxFunc() {
-    myPrint();
+std::string getOsName() {
+    return "I am LINUX";
 }
